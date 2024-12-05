@@ -21,7 +21,7 @@ AQUI ESCRITA
 - ``IRRKLANG``
 
 ## 📂 Acesso ao projeto
-Você pode acessar os arquivos do projeto clicando [aqui]([https://github.com/gui-lirasilva/Edige-POO/tree/master/src](https://github.com/kajucav/Sistema/tree/main/Java_Swing/src/main/java/swing/app/view)).
+Você pode acessar os arquivos do projeto clicando [https://github.com/GabrielRainwalker/projeto_asteroide/tree/master/src].
 
 # Autores
 
