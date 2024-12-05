@@ -21,7 +21,7 @@ AQUI ESCRITA
 - ``IRRKLANG``
 
 ## 📂 Acesso ao projeto
-Você pode acessar os arquivos do projeto clicando [https://github.com/GabrielRainwalker/projeto_asteroide/tree/master/src].
+Você pode acessar os arquivos do projeto clicando [aqui](https://github.com/GabrielRainwalker/projeto_asteroide/tree/master/src).
 
 # Autores
 
