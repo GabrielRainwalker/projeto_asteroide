@@ -10,6 +10,9 @@
 
 class Pontuacao {
 public:
+    int getPontuacaoAtual() const;
+    int getAsteroidesDestruidos() const;
+    bool isNovoRecorde() const;
     Pontuacao();
     void adicionarPontos(int pontos);
     void adicionarAsteroideDestruido();
@@ -20,9 +23,9 @@ public:
 
 private:
     int pontuacaoAtual;
-    int recorde;
     int asteroidesDestruidos;
     bool novoRecorde;
+    int recorde;
 };
 
 #endif //PONTUACAO_H

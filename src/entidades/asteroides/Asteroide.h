@@ -6,29 +6,25 @@
 
 class Asteroide {
 public:
-    Asteroide(const glm::vec2& posicao, float tamanho);
-    void atualizar(float deltaTime);
+    Asteroide();
+    Asteroide(const glm::vec2& posicao, float velocidade);
     void desenhar();
-    bool estaAtivo() const { return ativo; }
-    bool verificarColisao(const glm::vec2& ponto, float raio) const;
-    int getPontos() const { return pontos; }
-    bool foiDestruido() const { return destruido; }
-    void destruir() { destruido = true; }
-    glm::vec2 getPosicao() const { return posicao; }
-    float getRaio() const { return tamanho / 2.0f; }
+    void atualizar(float deltaTime);
+    glm::vec2 getPosicao() const;
+    float getRaio() const;
+    void destruir();
+    bool foiDestruido() const;
+    bool estaAtivo() const;
+    bool verificarColisao(const glm::vec2& posicao, float raio) const;
 
 private:
     glm::vec2 posicao;
     glm::vec2 direcao;
-    float rotacao;
-    float velocidadeRotacao;
     float velocidade;
-    float tamanho;
-    bool ativo;
-    static const glm::vec2 OFFSET_SPRITE_ASTEROIDE;
-    static const glm::vec2 TAMANHO_SPRITE_ASTEROIDE;
+    float rotacao;
+    float raio;
     bool destruido;
-    int pontos;
+    GLuint texturaID;
 };
 
-#endif //ASTEROIDE_H
+#endif // ASTEROIDE_H

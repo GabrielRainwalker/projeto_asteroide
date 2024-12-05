@@ -4,6 +4,11 @@
 #include <glm/ext/matrix_clip_space.hpp>
 #include <stdexcept>
 
+Shader* GerenciadorTexturas::shader = nullptr;
+glm::mat4 GerenciadorTexturas::projecao;
+GLuint GerenciadorTexturas::quadVAO = 0;
+std::unordered_map<std::string, GLuint> GerenciadorTexturas::texturas;
+
 void GerenciadorTexturas::inicializar() {
     // Inicializar shader
     shader = new Shader("vertex_shader.glsl", "fragment_shader.glsl");
@@ -36,6 +41,37 @@ void GerenciadorTexturas::inicializar() {
     glBindVertexArray(0);
 }
 
+GLuint GerenciadorTexturas::carregarTextura(const std::string& caminho) {
+    if (texturas.find(caminho) != texturas.end()) {
+        return texturas[caminho];
+    }
+
+    GLuint texturaID;
+    glGenTextures(1, &texturaID);
+
+    int largura, altura, canais;
+    unsigned char* dados = stbi_load(caminho.c_str(), &largura, &altura, &canais, 0);
+    if (dados) {
+        GLenum formato = (canais == 4) ? GL_RGBA : GL_RGB;
+        glBindTexture(GL_TEXTURE_2D, texturaID);
+        glTexImage2D(GL_TEXTURE_2D, 0, formato, largura, altura, 0, formato, GL_UNSIGNED_BYTE, dados);
+        glGenerateMipmap(GL_TEXTURE_2D);
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+        stbi_image_free(dados);
+        texturas[caminho] = texturaID;
+    } else {
+        stbi_image_free(dados);
+        throw std::runtime_error("Falha ao carregar textura: " + caminho);
+    }
+
+    return texturaID;
+}
+
 void GerenciadorTexturas::desenharSprite(GLuint texturaID,
                                         const glm::vec2& posicao,
                                         const glm::vec2& tamanho,
@@ -64,4 +100,11 @@ void GerenciadorTexturas::desenharSprite(GLuint texturaID,
     glBindVertexArray(quadVAO);
     glDrawArrays(GL_TRIANGLES, 0, 6);
     glBindVertexArray(0);
+}
+
+void GerenciadorTexturas::liberarTexturas() {
+    for (auto& par : texturas) {
+        glDeleteTextures(1, &par.second);
+    }
+    texturas.clear();
 }

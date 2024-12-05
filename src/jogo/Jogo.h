@@ -9,6 +9,9 @@
 class GerenciadorJogo {
 public:
     GerenciadorJogo();
+    void criarEfeitoExplosao(const glm::vec2& posicao);
+    void reiniciarJogo();
+    void voltarParaMenu();
     void atualizar(float deltaTime);
     void desenhar();
     void verificarColisoes();

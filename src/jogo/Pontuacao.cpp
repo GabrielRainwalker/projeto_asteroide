@@ -70,3 +70,15 @@ void Pontuacao::resetar() {
     asteroidesDestruidos = 0;
     novoRecorde = false;
 }
+
+int Pontuacao::getPontuacaoAtual() const {
+    return pontuacaoAtual;
+}
+
+int Pontuacao::getAsteroidesDestruidos() const {
+    return asteroidesDestruidos;
+}
+
+bool Pontuacao::isNovoRecorde() const {
+    return novoRecorde;
+}

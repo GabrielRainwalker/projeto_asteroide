@@ -18,7 +18,6 @@ void GerenciadorJogo::verificarColisoes() {
         }
     }
 }
-}
 
 void GerenciadorJogo::desenharPontuacao() {
     ImGui::SetNextWindowPos(ImVec2(10, 10), ImGuiCond_Always);

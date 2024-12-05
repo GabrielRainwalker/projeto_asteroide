@@ -4,8 +4,6 @@
 
 #include "Controles.h"
 
-#include <glm/gtc/matrix_transform.hpp>
-
 Controles::Controles(GLFWwindow* window, Nave* nave)
     : window(window),
       nave(nave),

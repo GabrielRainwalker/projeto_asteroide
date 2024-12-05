@@ -25,7 +25,10 @@ file(GLOB_RECURSE SOURCES
         "main.cpp"
 )
 
-add_executable(${PROJECT_NAME} ${SOURCES})
+add_executable(${PROJECT_NAME} ${SOURCES}
+        shaders/Shader.cpp
+        src/recursos/GerenciadorAsteroides.cpp
+        src/recursos/GerenciadorAsteroides.h)
 
 # Adicione as bibliotecas
 target_link_libraries(${PROJECT_NAME}

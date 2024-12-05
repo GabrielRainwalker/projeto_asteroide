@@ -1,23 +1,18 @@
-//
-// Created by T-Gamer on 05/12/2024.
-//
-
 #include "Mapa.h"
-#include <vec2.hpp>
+#include <GLFW/glfw3.h>
 
+const float Mapa::TILE_WIDTH = 64.0f;
+const float Mapa::TILE_HEIGHT = 32.0f;
+
+Mapa::Mapa(int largura, int altura, int numEstrelas)
+    : largura(largura), altura(altura), efeitoEstrelas(numEstrelas) {
+}
 
 void Mapa::desenhar() {
-    // Renderização isométrica
-    for (int y = 0; y < grid.size(); y++) {
-        for (int x = 0; x < grid[y].size(); x++) {
-            float isoX = (x - y) * TILE_WIDTH / 2;
-            float isoY = (x + y) * TILE_HEIGHT / 2;
+    // Fundo preto
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
 
-            gerenciadorTexturas->desenharTile(
-                "tileset",
-                glm::vec2(isoX, isoY),
-                glm::vec2(TILE_WIDTH, TILE_HEIGHT)
-            );
-        }
-    }
+    // Desenhar estrelas
+    efeitoEstrelas.desenhar();
 }

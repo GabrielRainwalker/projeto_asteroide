@@ -1,24 +1,21 @@
-//
-// Created by T-Gamer on 05/12/2024.
-//
-
 #ifndef MAPA_H
 #define MAPA_H
 
 #include <vector>
-#include "recursos/GerenciadorTexturas.h"
+#include <glm/glm.hpp>
+#include "../entidades/estrelas/Estrelas.h"
 
 class Mapa {
 public:
-    Mapa();
+    Mapa(int largura, int altura, int numEstrelas);
     void desenhar();
-private:
-    std::vector<std::vector<int>> grid;
-    GerenciadorTexturas* gerenciadorTexturas;
-};
 
-Mapa::Mapa() : gerenciadorTexturas(nullptr) {
-    // Inicialização do grid ou outras variáveis
-}
+private:
+    int largura;
+    int altura;
+    EfeitoEstrelas efeitoEstrelas;
+    static const float TILE_WIDTH;
+    static const float TILE_HEIGHT;
+};
 
 #endif //MAPA_H

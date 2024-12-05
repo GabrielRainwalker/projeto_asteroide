@@ -4,6 +4,7 @@
 class Menu {
 public:
     Menu();
+    void desenhar();
     void desenha();
     void renderizar();
     bool estaAtivo() const { return !jogoIniciado; }
