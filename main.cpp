@@ -13,6 +13,7 @@
 #include "entidades/estrelas/Estrelas.h"
 #include "menu/Menu.h"
 #include "jogo/Jogo.h"
+#include "jogo/Pontuacao.h"
 
 
 const unsigned int LARGURA_JANELA = 800;
@@ -132,5 +133,4 @@ int main() {
     glfwTerminate();
 
     return 0;
-}
 }

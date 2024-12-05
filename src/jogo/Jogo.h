@@ -12,13 +12,14 @@ public:
     void atualizar(float deltaTime);
     void desenhar();
     void verificarColisoes();
-    int getPontuacao() const { return pontuacao; }
+    bool isJogoFinalizado() const { return jogoFinalizado; }
+    void desenharPontuacao();
+    Pontuacao& getPontuacao() { return pontuacao; }
     void mostrarTelaFinal();
 
 private:
     std::vector<Asteroide> asteroides;
     std::vector<Missil>* misseis;
-    int pontuacao;
     float tempoProximoAsteroide;
 
     Pontuacao pontuacao;
@@ -26,7 +27,6 @@ private:
 
     void criarNovoAsteroide();
     void atualizarPontuacao();
-    void desenharPontuacao();
 };
 
 #endif //JOGO_H
