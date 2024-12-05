@@ -1,0 +1,3 @@
+C:/Users/T-Gamer/CLionProjects/projeto_asteroide/cmake-build-debug/CMakeFiles/projeto_asteroide.dir
+C:/Users/T-Gamer/CLionProjects/projeto_asteroide/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/T-Gamer/CLionProjects/projeto_asteroide/cmake-build-debug/CMakeFiles/rebuild_cache.dir
