@@ -50,6 +50,7 @@ cmake_ninja_workdir = C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/cmake-bu
 build cmake_object_order_depends_target_projeto_asteroide: phony || .
 
 build CMakeFiles/projeto_asteroide.dir/Imgui/imgui.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui/imgui.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\Imgui\imgui.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -57,6 +58,7 @@ build CMakeFiles/projeto_asteroide.dir/Imgui/imgui.cpp.obj: CXX_COMPILER__projet
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\Imgui
 
 build CMakeFiles/projeto_asteroide.dir/Imgui/imgui_demo.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui/imgui_demo.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\Imgui\imgui_demo.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -64,6 +66,7 @@ build CMakeFiles/projeto_asteroide.dir/Imgui/imgui_demo.cpp.obj: CXX_COMPILER__p
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\Imgui
 
 build CMakeFiles/projeto_asteroide.dir/Imgui/imgui_draw.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui/imgui_draw.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\Imgui\imgui_draw.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -71,6 +74,7 @@ build CMakeFiles/projeto_asteroide.dir/Imgui/imgui_draw.cpp.obj: CXX_COMPILER__p
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\Imgui
 
 build CMakeFiles/projeto_asteroide.dir/Imgui/imgui_impl_glfw.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui/imgui_impl_glfw.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\Imgui\imgui_impl_glfw.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -78,6 +82,7 @@ build CMakeFiles/projeto_asteroide.dir/Imgui/imgui_impl_glfw.cpp.obj: CXX_COMPIL
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\Imgui
 
 build CMakeFiles/projeto_asteroide.dir/Imgui/imgui_impl_opengl3.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\Imgui\imgui_impl_opengl3.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -85,6 +90,7 @@ build CMakeFiles/projeto_asteroide.dir/Imgui/imgui_impl_opengl3.cpp.obj: CXX_COM
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\Imgui
 
 build CMakeFiles/projeto_asteroide.dir/Imgui/imgui_tables.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui/imgui_tables.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\Imgui\imgui_tables.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -92,6 +98,7 @@ build CMakeFiles/projeto_asteroide.dir/Imgui/imgui_tables.cpp.obj: CXX_COMPILER_
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\Imgui
 
 build CMakeFiles/projeto_asteroide.dir/Imgui/imgui_widgets.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui/imgui_widgets.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\Imgui\imgui_widgets.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -99,6 +106,7 @@ build CMakeFiles/projeto_asteroide.dir/Imgui/imgui_widgets.cpp.obj: CXX_COMPILER
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\Imgui
 
 build CMakeFiles/projeto_asteroide.dir/main.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/main.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -106,6 +114,7 @@ build CMakeFiles/projeto_asteroide.dir/main.cpp.obj: CXX_COMPILER__projeto_aster
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir
 
 build CMakeFiles/projeto_asteroide.dir/src/audio/Audio.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/audio/Audio.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\src\audio\Audio.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -113,6 +122,7 @@ build CMakeFiles/projeto_asteroide.dir/src/audio/Audio.cpp.obj: CXX_COMPILER__pr
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\src\audio
 
 build CMakeFiles/projeto_asteroide.dir/src/controles/Controles.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/controles/Controles.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\src\controles\Controles.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -120,6 +130,7 @@ build CMakeFiles/projeto_asteroide.dir/src/controles/Controles.cpp.obj: CXX_COMP
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\src\controles
 
 build CMakeFiles/projeto_asteroide.dir/src/entidades/Missil/Missil.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/entidades/Missil/Missil.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\src\entidades\Missil\Missil.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -127,6 +138,7 @@ build CMakeFiles/projeto_asteroide.dir/src/entidades/Missil/Missil.cpp.obj: CXX_
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\src\entidades\Missil
 
 build CMakeFiles/projeto_asteroide.dir/src/entidades/asteroides/Asteroide.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/entidades/asteroides/Asteroide.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\src\entidades\asteroides\Asteroide.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -134,6 +146,7 @@ build CMakeFiles/projeto_asteroide.dir/src/entidades/asteroides/Asteroide.cpp.ob
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\src\entidades\asteroides
 
 build CMakeFiles/projeto_asteroide.dir/src/entidades/colisao/Colisao.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/entidades/colisao/Colisao.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\src\entidades\colisao\Colisao.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -141,6 +154,7 @@ build CMakeFiles/projeto_asteroide.dir/src/entidades/colisao/Colisao.cpp.obj: CX
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\src\entidades\colisao
 
 build CMakeFiles/projeto_asteroide.dir/src/entidades/estrelas/Estrelas.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/entidades/estrelas/Estrelas.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\src\entidades\estrelas\Estrelas.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -148,6 +162,7 @@ build CMakeFiles/projeto_asteroide.dir/src/entidades/estrelas/Estrelas.cpp.obj: 
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\src\entidades\estrelas
 
 build CMakeFiles/projeto_asteroide.dir/src/entidades/nave/Nave.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/entidades/nave/Nave.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\src\entidades\nave\Nave.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -155,6 +170,7 @@ build CMakeFiles/projeto_asteroide.dir/src/entidades/nave/Nave.cpp.obj: CXX_COMP
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\src\entidades\nave
 
 build CMakeFiles/projeto_asteroide.dir/src/jogo/Jogo.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/jogo/Jogo.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\src\jogo\Jogo.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -162,6 +178,7 @@ build CMakeFiles/projeto_asteroide.dir/src/jogo/Jogo.cpp.obj: CXX_COMPILER__proj
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\src\jogo
 
 build CMakeFiles/projeto_asteroide.dir/src/jogo/Pontuacao.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/jogo/Pontuacao.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\src\jogo\Pontuacao.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -169,6 +186,7 @@ build CMakeFiles/projeto_asteroide.dir/src/jogo/Pontuacao.cpp.obj: CXX_COMPILER_
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\src\jogo
 
 build CMakeFiles/projeto_asteroide.dir/src/mapa/Mapa.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/mapa/Mapa.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\src\mapa\Mapa.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -176,6 +194,7 @@ build CMakeFiles/projeto_asteroide.dir/src/mapa/Mapa.cpp.obj: CXX_COMPILER__proj
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\src\mapa
 
 build CMakeFiles/projeto_asteroide.dir/src/menu/Menu.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/menu/Menu.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\src\menu\Menu.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -183,6 +202,7 @@ build CMakeFiles/projeto_asteroide.dir/src/menu/Menu.cpp.obj: CXX_COMPILER__proj
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\src\menu
 
 build CMakeFiles/projeto_asteroide.dir/src/recursos/GerenciadorAsteroides.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/recursos/GerenciadorAsteroides.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\src\recursos\GerenciadorAsteroides.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -190,6 +210,7 @@ build CMakeFiles/projeto_asteroide.dir/src/recursos/GerenciadorAsteroides.cpp.ob
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\src\recursos
 
 build CMakeFiles/projeto_asteroide.dir/src/recursos/GerenciadorTexturas.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/recursos/GerenciadorTexturas.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\src\recursos\GerenciadorTexturas.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -197,6 +218,7 @@ build CMakeFiles/projeto_asteroide.dir/src/recursos/GerenciadorTexturas.cpp.obj:
   OBJECT_FILE_DIR = CMakeFiles\projeto_asteroide.dir\src\recursos
 
 build CMakeFiles/projeto_asteroide.dir/shaders/Shader.cpp.obj: CXX_COMPILER__projeto_asteroide_unscanned_Debug C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/shaders/Shader.cpp || cmake_object_order_depends_target_projeto_asteroide
+  DEFINES = -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS
   DEP_FILE = CMakeFiles\projeto_asteroide.dir\shaders\Shader.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/GLFW -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/irrKlang -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/stb -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/src -IC:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui
@@ -213,7 +235,7 @@ build CMakeFiles/projeto_asteroide.dir/shaders/Shader.cpp.obj: CXX_COMPILER__pro
 
 build projeto_asteroide.exe: CXX_EXECUTABLE_LINKER__projeto_asteroide_Debug CMakeFiles/projeto_asteroide.dir/Imgui/imgui.cpp.obj CMakeFiles/projeto_asteroide.dir/Imgui/imgui_demo.cpp.obj CMakeFiles/projeto_asteroide.dir/Imgui/imgui_draw.cpp.obj CMakeFiles/projeto_asteroide.dir/Imgui/imgui_impl_glfw.cpp.obj CMakeFiles/projeto_asteroide.dir/Imgui/imgui_impl_opengl3.cpp.obj CMakeFiles/projeto_asteroide.dir/Imgui/imgui_tables.cpp.obj CMakeFiles/projeto_asteroide.dir/Imgui/imgui_widgets.cpp.obj CMakeFiles/projeto_asteroide.dir/main.cpp.obj CMakeFiles/projeto_asteroide.dir/src/audio/Audio.cpp.obj CMakeFiles/projeto_asteroide.dir/src/controles/Controles.cpp.obj CMakeFiles/projeto_asteroide.dir/src/entidades/Missil/Missil.cpp.obj CMakeFiles/projeto_asteroide.dir/src/entidades/asteroides/Asteroide.cpp.obj CMakeFiles/projeto_asteroide.dir/src/entidades/colisao/Colisao.cpp.obj CMakeFiles/projeto_asteroide.dir/src/entidades/estrelas/Estrelas.cpp.obj CMakeFiles/projeto_asteroide.dir/src/entidades/nave/Nave.cpp.obj CMakeFiles/projeto_asteroide.dir/src/jogo/Jogo.cpp.obj CMakeFiles/projeto_asteroide.dir/src/jogo/Pontuacao.cpp.obj CMakeFiles/projeto_asteroide.dir/src/mapa/Mapa.cpp.obj CMakeFiles/projeto_asteroide.dir/src/menu/Menu.cpp.obj CMakeFiles/projeto_asteroide.dir/src/recursos/GerenciadorAsteroides.cpp.obj CMakeFiles/projeto_asteroide.dir/src/recursos/GerenciadorTexturas.cpp.obj CMakeFiles/projeto_asteroide.dir/shaders/Shader.cpp.obj | C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/lib/glfw3.lib C$:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/lib/irrKlang.lib
   FLAGS = -g
-  LINK_LIBRARIES = C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/lib/glfw3.lib  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/lib/irrKlang.lib  -lopengl32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/lib/glfw3.lib  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/lib/irrKlang.lib  -lopengl32  -lopengl32  -lm  -lkernel32  -luser32  -lgdi32  -lwinspool  -lshell32  -lole32  -loleaut32  -luuid  -lcomdlg32  -ladvapi32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\projeto_asteroide.dir
   POST_BUILD = cd .
   PRE_LINK = cd .

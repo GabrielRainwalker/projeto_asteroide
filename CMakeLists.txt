@@ -35,4 +35,20 @@ target_link_libraries(${PROJECT_NAME}
         ${PROJECT_SOURCE_DIR}/Library/lib/glfw3.lib
         ${PROJECT_SOURCE_DIR}/Library/lib/irrKlang.lib
         opengl32
+        -lopengl32  # Biblioteca OpenGL
+        -lm         # Biblioteca matemática
+        -lkernel32
+        -luser32
+        -lgdi32
+        -lwinspool
+        -lshell32
+        -lole32
+        -loleaut32
+        -luuid
+        -lcomdlg32
+        -ladvapi32
 )
+
+# Defina macros de compatibilidade
+add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+add_definitions(-D_SCL_SECURE_NO_WARNINGS)
