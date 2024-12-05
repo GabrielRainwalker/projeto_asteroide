@@ -1,27 +1,26 @@
-#pragma once
-#include <../../Library/include/GLFW/glfw3.h>
-#include <map>
+//
+// Created by T-Gamer on 05/12/2024.
+//
+
+#ifndef CONTROLES_H
+#define CONTROLES_H
+
+#include <glm/glm.hpp>
+#include <GLFW/glfw3.h>
+#include "entidades/nave/Nave.h"
 
 class Controles {
-private:
-    static Controles* instance;
-    GLFWwindow* janela;
-    std::map<int, bool> teclasPressionadas;
-
-    Controles() = default;
-
 public:
-    static Controles* getInstance();
-    void inicializar(GLFWwindow* window);
+    Controles(GLFWwindow* window, Nave* nave);
+    void processarEntradas(float deltaTime);
+    void processarMouse();
 
-    // Métodos de verificação
-    bool getTecla(int tecla);
-    bool getTeclaPressionada(int tecla);
-    bool getTeclaSolta(int tecla);
-
-    // Métodos do mouse
-    void getPosicaoMouse(double& x, double& y);
-    bool getBotaoMouse(int botao);
-
-    void atualizar();
+private:
+    GLFWwindow* window;
+    Nave* nave;
+    bool atirando;
+    glm::vec2 ultimaPosicaoMouse;
+    float velocidadeMovimento;
 };
+
+#endif //CONTROLES_H

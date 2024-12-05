@@ -1,67 +1,51 @@
 #include <imgui.h>
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
 #include "Menu.h"
 
-int main() {
-    // Inicialização do GLFW e OpenGL
-    if (!glfwInit()) return -1;
+void Menu::desenhar() {
+    ImGui_ImplOpenGL3_NewFrame();
+    ImGui_ImplGlfw_NewFrame();
+    ImGui::NewFrame();
 
-    GLFWwindow* window = glfwCreateWindow(800, 600, "Meu Jogo", NULL, NULL);
-    if (!window) {
-        glfwTerminate();
-        return -1;
+    if (!jogoIniciado) {
+        ImGui::SetNextWindowPos(ImVec2(400, 300), ImGuiCond_FirstUseEver);
+        ImGui::Begin("Menu Principal", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
+
+        if (ImGui::Button("Iniciar Jogo", ImVec2(200, 50))) {
+            jogoIniciado = true;
+        }
+
+        if (ImGui::Button("Configurações", ImVec2(200, 50))) {
+            mostrarConfiguracoes = true;
+        }
+
+        if (ImGui::Button("Créditos", ImVec2(200, 50))) {
+            mostrarCreditos = true;
+        }
+
+        ImGui::End();
     }
 
-    glfwMakeContextCurrent(window);
-
-    // Inicialização do GLAD
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        return -1;
+    if (mostrarConfiguracoes) {
+        ImGui::Begin("Configurações", &mostrarConfiguracoes);
+        ImGui::Text("Controles:");
+        ImGui::BulletText("W/S/A/D - Movimento da nave");
+        ImGui::BulletText("Mouse Esquerdo - Atirar");
+        ImGui::SliderFloat("Volume", &volume, 0.0f, 1.0f);
+        ImGui::End();
     }
 
-    // Inicialização do ImGui
-    IMGUI_CHECKVERSION();
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO(); (void)io;
-
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 330");
-
-    Menu menu;
-
-    while (!glfwWindowShouldClose(window)) {
-        glfwPollEvents();
-
-        // Início do frame do ImGui
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
-
-        // Desenhar o menu
-        menu.desenhar();
-
-        // Renderizar o ImGui
-        ImGui::Render();
-        int display_w, display_h;
-        glfwGetFramebufferSize(window, &display_w, &display_h);
-        glViewport(0, 0, display_w, display_h);
-        glClearColor(0.45f, 0.55f, 0.60f, 1.00f);
-        glClear(GL_COLOR_BUFFER_BIT);
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
-        glfwSwapBuffers(window);
+    if (mostrarCreditos) {
+        ImGui::Begin("Créditos", &mostrarCreditos);
+        ImGui::Text("Desenvolvido por: ");
+        ImGui::Text("Gabriel Duarte Marques");
+        ImGui::Text("Elter Rodrigues");
+        ImGui::Text("Kauanne Julia");
+        ImGui::Text("João Vitor Jardim");
+        ImGui::End();
     }
 
-    // Limpeza do ImGui e GLFW
-    ImGui_ImplOpenGL3_Shutdown();
-    ImGui_ImplGlfw_Shutdown();
-    ImGui::DestroyContext();
-
-    glfwDestroyWindow(window);
-    glfwTerminate();
-
-    return 0;
+    ImGui::Render();
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 }

@@ -1,26 +1,37 @@
 #ifndef NAVE_H
 #define NAVE_H
 
-#include <glad/glad.h>
 #include <glm/glm.hpp>
 #include <recursos/GerenciadorTexturas.h>
+#include <entidades/Missil/Missil.h>
+#include <vector>
 
 class Nave {
 public:
-    Nave();
+    Nave(GerenciadorTexturas* gerenciador);
+    void mover(const glm::vec2& direcao);
+    void setRotacao(float angulo);
+    void atirar();
+    void atualizar(float deltaTime);
     void desenhar();
-    void atualizarAnimacao(float deltaTime);
+    glm::vec2 getPosicao() const;
+
+    void atualizarMisseis(float deltaTime);
+    void desenharMisseis();
 
 private:
-    GLuint texturaID;
-    GLuint VBO, VAO;
     glm::vec2 posicao;
-    glm::vec2 tamanhoSprite;
-    glm::vec2 coordenadasSprite;
-    float tempoAcumulado; // Novo atributo
-    int frameAtual; // Novo atributo
-    int totalFrames; // Novo atributo
-    void inicializarQuad();
+    glm::vec2 velocidade;
+    float rotacao;
+    GLuint texturaID;
+    static const float TAMANHO_NAVE;
+    static const glm::vec2 OFFSET_SPRITE_NAVE;
+    static const glm::vec2 TAMANHO_SPRITE_NAVE;
+
+    std::vector<Missil> misseis;
+    float tempoUltimoTiro;
+    static const float TEMPO_ENTRE_TIROS;
 };
+
 
 #endif //NAVE_H
