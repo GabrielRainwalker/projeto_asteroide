@@ -1,7 +1,3 @@
-//
-// Created by T-Gamer on 05/12/2024.
-//
-
 #ifndef JOGO_H
 #define JOGO_H
 

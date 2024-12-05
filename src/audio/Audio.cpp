@@ -1,7 +1,3 @@
-//
-// Created by T-Gamer on 05/12/2024.
-//
-
 #include "Audio.h"
 #include <stdexcept>
 
@@ -29,7 +25,7 @@ void GerenciadorAudio::tocarMusicaFundo() {
 
 void GerenciadorAudio::tocarSomTiro() {
     if (engine) {
-        engine->play2D("assets/tiro.wav", false);
+        engine->play2D("assets/piuw.mp3", false);
     }
 }
 

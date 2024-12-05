@@ -1,7 +1,3 @@
-//
-// Created by T-Gamer on 05/12/2024.
-//
-
 #ifndef ASTEROIDE_H
 #define ASTEROIDE_H
 
@@ -34,6 +30,5 @@ private:
     bool destruido;
     int pontos;
 };
-
 
 #endif //ASTEROIDE_H

@@ -1,7 +1,3 @@
-//
-// Created by T-Gamer on 04/12/2024.
-//
-
 #include "GerenciadorTexturas.h"
 #include "stb_image.h"
 #include <glm/ext/matrix_transform.hpp>

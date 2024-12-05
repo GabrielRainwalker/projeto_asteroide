@@ -1,7 +1,3 @@
-//
-// Created by T-Gamer on 05/12/2024.
-//
-
 #include <imgui.h>
 #include "jogo/Jogo.h"
 #include "../entidades/colisao/Colisao.h"
@@ -19,9 +15,9 @@ void GerenciadorJogo::verificarColisoes() {
                 pontuacao.adicionarAsteroideDestruido();
                 criarEfeitoExplosao(asteroide.getPosicao());
             }
-            }
         }
     }
+}
 }
 
 void GerenciadorJogo::desenharPontuacao() {

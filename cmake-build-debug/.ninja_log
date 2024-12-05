@@ -13,3 +13,5 @@
 37	2453	7550702507354439	CMakeFiles/projeto_asteroide.dir/Imgui/imgui_widgets.cpp.obj	449b2ee4b1ab2656
 1507	2782	7550702522055938	CMakeFiles/projeto_asteroide.dir/Imgui/imgui_impl_opengl3.cpp.obj	65f409f319d5fd0b
 653	3024	7550702513518969	CMakeFiles/projeto_asteroide.dir/Imgui/imgui_impl_glfw.cpp.obj	479d2c9d48b3ad18
+49	1042	7551235011045858	CMakeFiles/projeto_asteroide.dir/src/recursos/GerenciadorTexturas.cpp.obj	22552a33f3259c11
+38	1124	7551235010935834	CMakeFiles/projeto_asteroide.dir/src/entidades/nave/Nave.cpp.obj	9013154f79648827

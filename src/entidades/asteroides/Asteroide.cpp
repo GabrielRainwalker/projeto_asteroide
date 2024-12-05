@@ -1,7 +1,3 @@
-//
-// Created by T-Gamer on 05/12/2024.
-//
-
 #include "Asteroide.h"
 #include <random>
 
