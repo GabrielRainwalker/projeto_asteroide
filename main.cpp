@@ -1,115 +1,130 @@
-#define GLM_FORCE_PURE
-
-#include <imgui.h>
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
-#include <glad/glad.h>
-#include <glm/glm.hpp>
-#include <GLFW/glfw3.h>
-#include "entidades/nave/Nave.h"
-#include "controles/Controles.h"
-#include "recursos/GerenciadorAsteroides.h"
-#include "audio/Audio.h"
-#include "entidades/estrelas/Estrelas.h"
-#include "menu/Menu.h"
-#include "jogo/Jogo.h"
-#include "jogo/Pontuacao.h"
-#include "mapa/Mapa.h"
 
-const unsigned int LARGURA_JANELA = 800;
-const unsigned int ALTURA_JANELA = 600;
+#include "src/menu/Menu.h"
+#include "jogo/GameManager.h"
+#include <iostream>
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-    glViewport(0, 0, width, height);
+
+GameManager* gameManager;
+
+void erro_callback(int erro, const char* descricao) {
+    std::cerr << "Erro GLFW (" << erro << "): " << descricao << std::endl;
 }
 
+
+void framebuffer_size_callback(GLFWwindow* janela, int largura, int altura) {
+    glViewport(0, 0, largura, altura);
+}
+
+void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
+    if (!gameManager) return;
+
+    if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
+        if (gameManager->getIsPlaying() && !gameManager->getIsPaused()) {
+            gameManager->getPlayerShip()->shoot();
+        }
+    }
+}
+
+float deltaTime = 0.0f;
+float lastFrame = 0.0f;
+
 int main() {
+
+    glfwSetErrorCallback(erro_callback);
+
+
     if (!glfwInit()) {
+        std::cerr << "Falha ao inicializar GLFW" << std::endl;
         return -1;
     }
+
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(LARGURA_JANELA, ALTURA_JANELA, "Asteroides", nullptr, nullptr);
-    if (!window) {
+    glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
+    glfwWindowHint(GLFW_SAMPLES, 4);
+
+
+    GLFWmonitor* monitor = glfwGetPrimaryMonitor();
+    const GLFWvidmode* mode = glfwGetVideoMode(monitor);
+
+    int windowWidth = 800;
+    int windowHeight = 600;
+    int xpos = (mode->width - windowWidth) / 2;
+    int ypos = (mode->height - windowHeight) / 2;
+
+    GLFWwindow* janela = glfwCreateWindow(windowWidth, windowHeight, "Jogo Asteroide", nullptr, nullptr);
+    if (!janela) {
+        std::cerr << "Falha ao criar janela GLFW" << std::endl;
         glfwTerminate();
         return -1;
     }
 
-    glfwMakeContextCurrent(window);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
+    glfwSetWindowPos(janela, xpos, ypos);
+    glfwMakeContextCurrent(janela);
+
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+        std::cerr << "Falha ao inicializar GLAD" << std::endl;
+        glfwDestroyWindow(janela);
+        glfwTerminate();
         return -1;
     }
 
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 130");
+    ImGuiIO& io = ImGui::GetIO();
+    ImGui::StyleColorsDark();
 
-    GerenciadorTexturas::inicializar();
+    ImGui_ImplGlfw_InitForOpenGL(janela, true);
+    ImGui_ImplOpenGL3_Init("#version 330");
 
-    GerenciadorTexturas gerenciadorTexturas;
-    Nave nave(&gerenciadorTexturas);
-    Controles controles(window, &nave);
-    float lastFrame = 0.0f;
+    glViewport(0, 0, windowWidth, windowHeight);
+    glfwSetFramebufferSizeCallback(janela, framebuffer_size_callback);
+    glfwSwapInterval(1);
 
-    GLuint texturaNave = GerenciadorTexturas::carregarTextura("assets/nave.png");
-    GerenciadorAsteroides gerenciadorAsteroides;
-    GerenciadorAudio audio;
-    GerenciadorJogo gerenciadorJogo;
-    Mapa mapa(20, 20, 150); // 20x20 tiles, 150 estrelas
+    gameManager = new GameManager(janela);
+    glfwSetMouseButtonCallback(janela, mouseButtonCallback);
+    Menu menu(janela, gameManager);
+    float lastTime = glfwGetTime();
 
-    audio.tocarMusicaFundo();
 
-    while (!glfwWindowShouldClose(window)) {
-        glClear(GL_COLOR_BUFFER_BIT);
+    while (!glfwWindowShouldClose(janela)) {
+        float currentTime = glfwGetTime();
+        float deltaTime = currentTime - lastTime;
+        lastTime = currentTime;
+
+        glfwPollEvents();
 
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        float currentFrame = glfwGetTime();
-        float deltaTime = currentFrame - lastFrame;
-        lastFrame = currentFrame;
-
-        nave.atualizar(deltaTime);
-        gerenciadorAsteroides.atualizar(deltaTime);
-        gerenciadorJogo.atualizar(deltaTime);
-
-        gerenciadorJogo.verificarColisoes();
-
         glClear(GL_COLOR_BUFFER_BIT);
 
-        mapa.desenhar();
-        gerenciadorAsteroides.desenhar();
-        nave.desenhar();
-        nave.desenharMisseis();
-        gerenciadorJogo.desenhar();
-        gerenciadorJogo.desenharPontuacao();
-
-        if (gerenciadorJogo.isJogoFinalizado()) {
-            gerenciadorJogo.mostrarTelaFinal();
-        }
+        menu.update(deltaTime);
+        menu.desenhar();
 
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-        glfwSwapBuffers(window);
-        glfwPollEvents();
+        gameManager->update(deltaTime);
+        gameManager->render();
+
+        glfwSwapBuffers(janela);
     }
 
-    gerenciadorJogo.getPontuacao().salvarRecorde();
-    GerenciadorTexturas::liberarTexturas();
+    delete gameManager;
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
+
+    glfwDestroyWindow(janela);
     glfwTerminate();
 
     return 0;
