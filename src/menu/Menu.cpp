@@ -9,20 +9,15 @@ Menu::Menu(GLFWwindow* window, GameManager* gameManager) : janela(window), gameM
     inicializar();
 }
 
-    Menu::~Menu() {
-        ImGui_ImplOpenGL3_Shutdown();
-        ImGui_ImplGlfw_Shutdown();
-        ImGui::DestroyContext();
-    }
+Menu::~Menu() {
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();
+}
 
 void Menu::inicializar() {
-
     ImGuiIO& io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-
-    // Inicialização dos backends ANTES de carregar a fonte
-    ImGui_ImplGlfw_InitForOpenGL(janela, true);
-    ImGui_ImplOpenGL3_Init("#version 130");
 
     // Carregar a fonte ANTES de qualquer frame
     io.Fonts->Clear(); // Limpa fontes existentes
