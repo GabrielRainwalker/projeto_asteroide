@@ -228,9 +228,19 @@ void Menu::update(float deltaTime) {
 }
 
 void Menu::desenhar() {
-
     if (jogoIniciado) {
+        // Renderiza o jogo
         gameManager->render();
+
+        // Renderiza a HUD do jogo
+        ImGui::SetNextWindowPos(ImVec2(10, 10));
+        ImGui::SetNextWindowSize(ImVec2(200, 100));
+        ImGui::Begin("HUD", nullptr,
+            ImGuiWindowFlags_NoTitleBar |
+            ImGuiWindowFlags_NoResize |
+            ImGuiWindowFlags_NoMove |
+            ImGuiWindowFlags_NoBackground);
+        ImGui::End();
     } else {
         desenharMenuPrincipal();
     }
@@ -242,5 +252,4 @@ void Menu::desenhar() {
     if (mostrarCreditos) {
         desenharCreditos();
     }
-
 }

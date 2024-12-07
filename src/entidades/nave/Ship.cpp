@@ -2,7 +2,8 @@
 #include "recursos/TextureManager.h"
 #include "Ship.h"
 #include <algorithm>
-
+#include <iostream>
+#include <ostream>
 
 
 Ship::Ship(GLFWwindow* window) :
@@ -22,18 +23,25 @@ Ship::~Ship() {
 
 void Ship::init() {
     shader = new Shader("../shaders/sprite.vert", "../shaders/sprite.frag");
+    textureID = TextureManager::getInstance().loadTexture("../assets/nave.png");
 
-    textureID = TextureManager::getInstance().loadTexture("assets/nave.png");
+    if (textureID == 0) {
+        std::cerr << "Erro ao carregar textura da nave" << std::endl;
+    }
+
+    position = glm::vec2(400.0f, 300.0f); // Centraliza a nave
+    velocity = glm::vec2(0.0f);
+    rotation = 0.0f;
 
     setupMesh();
 }
 
 void Ship::setupMesh() {
     float vertices[] = {
-        -0.5f, -0.5f,  0.0f, 0.0f,
-         0.5f, -0.5f,  1.0f, 0.0f,
-         0.5f,  0.5f,  1.0f, 1.0f,
-        -0.5f,  0.5f,  0.0f, 1.0f
+        -0.3f, -0.3f,  0.0f, 0.0f,
+         0.3f, -0.3f,  1.0f, 0.0f,
+         0.3f,  0.3f,  1.0f, 1.0f,
+        -0.3f,  0.3f,  0.0f, 1.0f
     };
 
     unsigned int indices[] = {
@@ -64,11 +72,13 @@ void Ship::handleInput(float deltaTime) {
     ImGuiIO& io = ImGui::GetIO();
     if (io.WantCaptureKeyboard) return;
 
+    // Rotação
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
         rotation += 180.0f * deltaTime;
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         rotation -= 180.0f * deltaTime;
 
+    // Movimento
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
         float radians = glm::radians(rotation);
         velocity.x = -sin(radians) * speed;
@@ -76,6 +86,9 @@ void Ship::handleInput(float deltaTime) {
     } else {
         velocity *= 0.98f;
     }
+
+    position.x = glm::clamp(position.x, 0.0f, 800.0f);
+    position.y = glm::clamp(position.y, 0.0f, 600.0f);
 }
 
 void Ship::shoot() {

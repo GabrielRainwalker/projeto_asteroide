@@ -3,6 +3,8 @@
 //
 
 #include "StarSystem.h"
+
+#include <iostream>
 #include <random>
 #include <ext/matrix_transform.hpp>
 
@@ -18,6 +20,7 @@ StarSystem::~StarSystem() {
 
 void StarSystem::init() {
     shader = new Shader("../shaders/star.vert", "../shaders/star.frag");
+
     setupMesh();
     createStars();
 }
@@ -70,6 +73,8 @@ void StarSystem::update(float deltaTime, float time) {
 }
 
 void StarSystem::render() {
+    if (!shader) return;
+
     shader->use();
     glBindVertexArray(VAO);
 

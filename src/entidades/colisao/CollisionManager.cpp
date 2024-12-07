@@ -36,12 +36,25 @@ void CollisionManager::checkProjectileAsteroidCollisions(
 bool CollisionManager::checkShipAsteroidCollisions(
     const Ship* ship,
     const std::vector<std::unique_ptr<Asteroid>>& asteroids) {
+
+    if (!ship) return false;
+
+    const float SAFE_START_TIME = 2.0f; // 2 segundos de invencibilidade
+    static float gameStartTime = glfwGetTime();
+
+    if (glfwGetTime() - gameStartTime < SAFE_START_TIME) {
+        return false;
+    }
+
     for (const auto& asteroid : asteroids) {
-        if (asteroid->isDestroyed()) continue;
-        if (checkCircleCollision(ship->getPosition(), ship->getRadius(),
-                                 asteroid->getPosition(), asteroid->getRadius())) {
+        if (!asteroid || asteroid->isDestroyed()) continue;
+
+        float distance = glm::length(ship->getPosition() - asteroid->getPosition());
+        float minDistance = ship->getRadius() + asteroid->getRadius() * 0.8f; // Reduzir hitbox
+
+        if (distance < minDistance) {
             return true;
-                                 }
+        }
     }
     return false;
 }

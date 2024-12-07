@@ -9,7 +9,7 @@ Asteroid::Asteroid(float x, float y, float s)
     : position(x, y), size(s), isExploding(false) {
     // Inicialize o shader, textura e configure a mesh
     shader = new Shader("../shaders/sprite.vert", "../shaders/sprite.frag");
-    textureID = TextureManager::getInstance().loadTexture("assets/asteroide.png");
+    textureID = TextureManager::getInstance().loadTexture("../assets/asteroide.png");
     setupMesh();
 
     // Defina uma velocidade aleatória

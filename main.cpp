@@ -99,31 +99,22 @@ int main() {
     Menu menu(janela, gameManager);
     float lastTime = glfwGetTime();
 
-
     while (!glfwWindowShouldClose(janela)) {
         float currentTime = glfwGetTime();
         float deltaTime = currentTime - lastTime;
         lastTime = currentTime;
 
         glfwPollEvents();
-
-        menu.update(deltaTime);
-
-        // Início do frame do ImGui
-        ImGui_ImplOpenGL3_NewFrame();
+         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        // Construção da interface do ImGui
-        menu.desenhar();
-
-        // Limpar o buffer de cor ANTES da renderização
         glClear(GL_COLOR_BUFFER_BIT);
 
-        glBindVertexArray(0);
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
+        menu.update(deltaTime);
+        menu.desenhar();
 
-        // Renderização do ImGui
+
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
@@ -133,37 +124,7 @@ int main() {
     delete gameManager;
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
-    ImGui::DestroyContext();while (!glfwWindowShouldClose(janela)) {
-        float currentTime = glfwGetTime();
-        float deltaTime = currentTime - lastTime;
-        lastTime = currentTime;
-
-        glfwPollEvents();
-
-        // Atualização do jogo e do menu
-        gameManager->update(deltaTime);
-        menu.update(deltaTime);
-
-        // Início do frame do ImGui
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
-
-        // Construção da interface do ImGui
-        menu.desenhar();
-
-        // Limpar o buffer de cor ANTES da renderização
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        // Renderização do jogo
-        gameManager->render();
-
-        // Renderização do ImGui
-        ImGui::Render();
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
-        glfwSwapBuffers(janela);
-    }
+    ImGui::DestroyContext();
 
     glfwDestroyWindow(janela);
     glfwTerminate();

@@ -20,18 +20,35 @@ GameManager::GameManager(GLFWwindow* window) :
     isPlaying(false),
     isPaused(false),
     score(0) {
+    playerShip = std::make_unique<Ship>(window);
+    if (playerShip) {
+        playerShip->init();
+    }
+
 }
 
 void GameManager::startGame() {
+    std::cout << "Iniciando jogo..." << std::endl;
+
     isPlaying = true;
     isPaused = false;
     score = 0;
 
-    playerShip = std::make_unique<Ship>(janela);
+    if (!playerShip) {
+        std::cout << "Criando nova nave..." << std::endl;
+        playerShip = std::make_unique<Ship>(janela);
+    }
+
+    std::cout << "Inicializando nave..." << std::endl;
     playerShip->init();
 
+    std::cout << "Inicializando sistema de estrelas..." << std::endl;
     starSystem.init();
+
+    std::cout << "Criando asteroides..." << std::endl;
     spawnAsteroids(5);
+
+    std::cout << "Jogo iniciado com sucesso!" << std::endl;
 }
 
 void GameManager::pauseGame() {
@@ -54,30 +71,37 @@ bool GameManager::checkCircleCollision(const glm::vec2& pos1, float radius1,
 }
 
 void GameManager::update(float deltaTime) {
-    if (isPlaying) {
-        float currentTime = glfwGetTime(); // Certifique-se de que glfwGetTime() é chamado após glfwInit()
-        starSystem.update(deltaTime, currentTime);
+    if (!isPlaying) return;
 
-        playerShip->update(deltaTime);
+    if (!playerShip) {
+        std::cerr << "Erro: playerShip é nullptr" << std::endl;
+        return;
+    }
 
-        for (auto& asteroid : asteroids) {
-            asteroid->update(deltaTime);
-        }
+    float currentTime = glfwGetTime();
+    starSystem.update(deltaTime, currentTime);
 
-        CollisionManager::checkProjectileAsteroidCollisions(
-            playerShip->getProjectiles(), asteroids, score);
+    // Atualiza a nave
+    playerShip->update(deltaTime);
 
-        if (CollisionManager::checkShipAsteroidCollisions(
-            playerShip.get(), asteroids)) {
-            isPlaying = false;
-            std::cout << "Fim de Jogo!" << std::endl;
-            }
+    // Atualiza asteroides
+    for (auto& asteroid : asteroids) {
+        asteroid->update(deltaTime);
+    }
+
+    // Verifica colisões
+    if (CollisionManager::checkShipAsteroidCollisions(playerShip.get(), asteroids)) {
+        std::cout << "Colisao detectada" << std::endl;
+        isPlaying = false;
+        std::cout << "Fim de Jogo" << std::endl;
     }
 }
 
-
-
 void GameManager::render() {
+    if (!isPlaying) return;
+    glClear(GL_COLOR_BUFFER_BIT);
+    starSystem.render();
+
     if (isPlaying) {
         starSystem.render();
         playerShip->render();
@@ -86,7 +110,6 @@ void GameManager::render() {
             asteroid->render();
         }
 
-        // Chame o renderHUD após renderizar os elementos do jogo
         renderHUD();
     }
 }
@@ -113,7 +136,7 @@ void GameManager::renderHUD() {
                                     ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoSavedSettings |
                                     ImGuiWindowFlags_NoInputs | ImGuiWindowFlags_NoBackground);
 
-    ImGui::Text("Pontuação: %d", score);
+    ImGui::Text("Score: %d", score);
 
     ImGui::End();
 }
