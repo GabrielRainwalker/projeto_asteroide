@@ -10,9 +10,6 @@ Menu::Menu(GLFWwindow* window, GameManager* gameManager) : janela(window), gameM
 }
 
 Menu::~Menu() {
-    ImGui_ImplOpenGL3_Shutdown();
-    ImGui_ImplGlfw_Shutdown();
-    ImGui::DestroyContext();
 }
 
 void Menu::inicializar() {

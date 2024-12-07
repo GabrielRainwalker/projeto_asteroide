@@ -104,31 +104,29 @@ int main() {
 
         glfwPollEvents();
 
+        // Atualização do jogo e do menu
+        gameManager->update(deltaTime);
+        menu.update(deltaTime);
+
         // Início do frame do ImGui
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        // Atualização e renderização do jogo
-        gameManager->update(deltaTime);
-        gameManager->render();
-
         // Construção da interface do ImGui
-        menu.update(deltaTime);
         menu.desenhar();
+
+        // Limpar o buffer de cor ANTES da renderização
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        // Renderização do jogo
+        gameManager->render();
+        glBindVertexArray(0);
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
 
         // Renderização do ImGui
         ImGui::Render();
-        ImDrawData* draw_data = ImGui::GetDrawData();
-        if (!draw_data) {
-            std::cerr << "Erro: draw_data é nullptr." << std::endl;
-        } else {
-            std::cerr << "draw_data->DisplaySize: (" << draw_data->DisplaySize.x << ", " << draw_data->DisplaySize.y << ")" << std::endl;
-            std::cerr << "draw_data->FramebufferScale: (" << draw_data->FramebufferScale.x << ", " << draw_data->FramebufferScale.y << ")" << std::endl;
-        }
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        ImGui_ImplOpenGL3_RenderDrawData(draw_data);
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
         glfwSwapBuffers(janela);
     }
@@ -136,7 +134,37 @@ int main() {
     delete gameManager;
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
-    ImGui::DestroyContext();
+    ImGui::DestroyContext();while (!glfwWindowShouldClose(janela)) {
+        float currentTime = glfwGetTime();
+        float deltaTime = currentTime - lastTime;
+        lastTime = currentTime;
+
+        glfwPollEvents();
+
+        // Atualização do jogo e do menu
+        gameManager->update(deltaTime);
+        menu.update(deltaTime);
+
+        // Início do frame do ImGui
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+
+        // Construção da interface do ImGui
+        menu.desenhar();
+
+        // Limpar o buffer de cor ANTES da renderização
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        // Renderização do jogo
+        gameManager->render();
+
+        // Renderização do ImGui
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+        glfwSwapBuffers(janela);
+    }
 
     glfwDestroyWindow(janela);
     glfwTerminate();
