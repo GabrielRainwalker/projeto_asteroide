@@ -23,7 +23,7 @@ Ship::~Ship() {
 
 void Ship::init() {
     shader = new Shader("../shaders/sprite.vert", "../shaders/sprite.frag");
-    textureID = TextureManager::getInstance().loadTexture("../assets/nave.png");
+    textureID = TextureManager::getInstance().loadTexture("assets/nave.png");
 
     if (textureID == 0) {
         std::cerr << "Erro ao carregar textura da nave" << std::endl;
@@ -37,11 +37,17 @@ void Ship::init() {
 }
 
 void Ship::setupMesh() {
+    float frameWidth = 1.0f / 16.0f;
+    float frameHeight = 1.0f / 8.0f;
+    float texX = 0.0f;
+    float texY = 0.0f;
+
     float vertices[] = {
-        -0.3f, -0.3f,  0.0f, 0.0f,
-         0.3f, -0.3f,  1.0f, 0.0f,
-         0.3f,  0.3f,  1.0f, 1.0f,
-        -0.3f,  0.3f,  0.0f, 1.0f
+
+        -0.3f, -0.3f,  texX,              texY + frameHeight,
+         0.3f, -0.3f,  texX + frameWidth, texY + frameHeight,
+         0.3f,  0.3f,  texX + frameWidth, texY,
+        -0.3f,  0.3f,  texX,              texY
     };
 
     unsigned int indices[] = {

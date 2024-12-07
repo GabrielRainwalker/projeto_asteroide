@@ -9,7 +9,7 @@ Asteroid::Asteroid(float x, float y, float s)
     : position(x, y), size(s), isExploding(false) {
     // Inicialize o shader, textura e configure a mesh
     shader = new Shader("../shaders/sprite.vert", "../shaders/sprite.frag");
-    textureID = TextureManager::getInstance().loadTexture("../assets/asteroide.png");
+    textureID = TextureManager::getInstance().loadTexture("assets/asteroide.png");
     setupMesh();
 
     // Defina uma velocidade aleatória
@@ -32,13 +32,15 @@ void Asteroid::init() {
 }
 
 void Asteroid::setupMesh() {
-    float vertices[] = {
-        -0.5f, -0.5f,  0.0f, 0.0f,
-         0.5f, -0.5f,  0.125f, 0.0f,
-         0.5f,  0.5f,  0.125f, 1.0f,
-        -0.5f,  0.5f,  0.0f, 1.0f
-    };
+    float frameWidth = 1.0f / 8.0f;
+    float frameHeight = 1.0f;
 
+    float vertices[] = {
+        -0.5f, -0.5f,  0.0f,          frameHeight,
+         0.5f, -0.5f,  frameWidth,    frameHeight,
+         0.5f,  0.5f,  frameWidth,    0.0f,
+        -0.5f,  0.5f,  0.0f,          0.0f
+    };
     unsigned int indices[] = {
         0, 1, 2,
         2, 3, 0

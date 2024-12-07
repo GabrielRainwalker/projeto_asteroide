@@ -29,7 +29,7 @@ Projectile::~Projectile() {
 
 void Projectile::init() {
     shader = new Shader("../shaders/sprite.vert", "../shaders/sprite.frag");
-    textureID = TextureManager::getInstance().loadTexture("../assets/nave.png");
+    textureID = TextureManager::getInstance().loadTexture("assets/nave.png");
     setupMesh();
 }
 

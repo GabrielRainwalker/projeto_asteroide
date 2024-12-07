@@ -37,9 +37,6 @@ CMakeFiles/projeto_asteroide.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/errno.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h \
  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui/imgui_impl_opengl3.h \
- C:\Users\T-Gamer\CLionProjects\projeto_asteroide\src/menu/Menu.h \
- C:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/jogo/GameManager.h \
- C:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/entidades/nave/Ship.h \
  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/glm.hpp \
  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/detail/_fixes.hpp \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath \
@@ -230,6 +227,47 @@ CMakeFiles/projeto_asteroide.dir/main.cpp.obj: \
  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/matrix_transform.hpp \
  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/matrix_transform.inl \
  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/gtc/matrix_transform.inl \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/gtc/type_ptr.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/gtc/quaternion.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/vector_relational.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/vector_relational.inl \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/detail/type_float.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_common.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_geometric.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_geometric.inl \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_common.inl \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_float.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/detail/type_quat.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_relational.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_relational.inl \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/detail/type_quat.inl \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_float_precision.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_double.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_double_precision.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_trigonometric.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_trigonometric.inl \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_transform.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/quaternion_transform.inl \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/gtc/quaternion.inl \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/gtc/epsilon.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/detail/setup.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/gtc/epsilon.inl \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/gtc/vec1.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/vector_bool1.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/vector_bool1_precision.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/vector_float1.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/vector_float1_precision.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/vector_double1.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/vector_double1_precision.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/vector_int1.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/vector_int1_sized.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/vector_uint1.hpp \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/ext/vector_uint1_sized.hpp \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstring \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/gtc/type_ptr.inl \
+ C:\Users\T-Gamer\CLionProjects\projeto_asteroide\src/menu/Menu.h \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/jogo/GameManager.h \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/entidades/nave/Ship.h \
  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/shaders/Shader.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
