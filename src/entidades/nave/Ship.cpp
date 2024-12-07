@@ -1,3 +1,4 @@
+#include <imgui.h>
 #include "recursos/TextureManager.h"
 #include "Ship.h"
 #include <algorithm>
@@ -60,6 +61,9 @@ void Ship::setupMesh() {
 }
 
 void Ship::handleInput(float deltaTime) {
+    ImGuiIO& io = ImGui::GetIO();
+    if (io.WantCaptureKeyboard) return;
+
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
         rotation += 180.0f * deltaTime;
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)

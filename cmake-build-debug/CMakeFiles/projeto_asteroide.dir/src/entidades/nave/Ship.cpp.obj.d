@@ -1,10 +1,9 @@
 CMakeFiles/projeto_asteroide.dir/src/entidades/nave/Ship.cpp.obj: \
  C:\Users\T-Gamer\CLionProjects\projeto_asteroide\src\entidades\nave\Ship.cpp \
- C:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/recursos/TextureManager.h \
- C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad/glad.h \
- C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR/khrplatform.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui/imgui.h \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Imgui/imconfig.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/float.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/float.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
@@ -12,14 +11,37 @@ CMakeFiles/projeto_asteroide.dir/src/entidades/nave/Ship.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdarg.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_stdarg.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/string.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/assert.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdlib.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdlib \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/limits.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/errno.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/src/recursos/TextureManager.h \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glad/glad.h \
+ C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/KHR/khrplatform.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
+ C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/char_traits.h \
@@ -27,7 +49,6 @@ CMakeFiles/projeto_asteroide.dir/src/entidades/nave/Ship.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwchar \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_stat64.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
@@ -82,17 +103,6 @@ CMakeFiles/projeto_asteroide.dir/src/entidades/nave/Ship.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/string_view.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdlib \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/limits.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdlib.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/errno.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdio \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/charconv.h \
@@ -130,13 +140,10 @@ CMakeFiles/projeto_asteroide.dir/src/entidades/nave/Ship.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/riemann_zeta.tcc \
  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/detail/setup.hpp \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/assert.h \
  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/simd/platform.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cfloat \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/float.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/x86_64-w64-mingw32/include/float.h \
  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/fwd.hpp \
  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/detail/qualifier.hpp \
  C:/Users/T-Gamer/CLionProjects/projeto_asteroide/Library/include/glm/detail/setup.hpp \

@@ -19,6 +19,9 @@ void framebuffer_size_callback(GLFWwindow* janela, int largura, int altura) {
 }
 
 void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
+    ImGuiIO& io = ImGui::GetIO();
+    if (io.WantCaptureMouse) return; // O ImGui está capturando o mouse
+
     if (!gameManager) return;
 
     if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
@@ -78,6 +81,7 @@ int main() {
         return -1;
     }
 
+    glfwSetMouseButtonCallback(janela, mouseButtonCallback);
 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
@@ -92,7 +96,6 @@ int main() {
     glfwSwapInterval(1);
 
     gameManager = new GameManager(janela);
-    glfwSetMouseButtonCallback(janela, mouseButtonCallback);
     Menu menu(janela, gameManager);
     float lastTime = glfwGetTime();
 
@@ -104,8 +107,6 @@ int main() {
 
         glfwPollEvents();
 
-        // Atualização do jogo e do menu
-        gameManager->update(deltaTime);
         menu.update(deltaTime);
 
         // Início do frame do ImGui
@@ -119,8 +120,6 @@ int main() {
         // Limpar o buffer de cor ANTES da renderização
         glClear(GL_COLOR_BUFFER_BIT);
 
-        // Renderização do jogo
-        gameManager->render();
         glBindVertexArray(0);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
 
