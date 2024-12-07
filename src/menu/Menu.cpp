@@ -246,5 +246,4 @@ void Menu::desenhar() {
         desenharCreditos();
     }
 
-    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 }

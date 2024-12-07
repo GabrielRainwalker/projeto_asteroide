@@ -6,6 +6,7 @@
 #include <iostream>
 
 
+
 GameManager* gameManager;
 
 void erro_callback(int erro, const char* descricao) {
@@ -29,6 +30,7 @@ void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
 
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
+
 
 int main() {
 
@@ -76,6 +78,7 @@ int main() {
         return -1;
     }
 
+
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
@@ -101,20 +104,31 @@ int main() {
 
         glfwPollEvents();
 
+        // Início do frame do ImGui
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        glClear(GL_COLOR_BUFFER_BIT);
+        // Atualização e renderização do jogo
+        gameManager->update(deltaTime);
+        gameManager->render();
 
+        // Construção da interface do ImGui
         menu.update(deltaTime);
         menu.desenhar();
 
+        // Renderização do ImGui
         ImGui::Render();
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        ImDrawData* draw_data = ImGui::GetDrawData();
+        if (!draw_data) {
+            std::cerr << "Erro: draw_data é nullptr." << std::endl;
+        } else {
+            std::cerr << "draw_data->DisplaySize: (" << draw_data->DisplaySize.x << ", " << draw_data->DisplaySize.y << ")" << std::endl;
+            std::cerr << "draw_data->FramebufferScale: (" << draw_data->FramebufferScale.x << ", " << draw_data->FramebufferScale.y << ")" << std::endl;
+        }
+        glClear(GL_COLOR_BUFFER_BIT);
 
-        gameManager->update(deltaTime);
-        gameManager->render();
+        ImGui_ImplOpenGL3_RenderDrawData(draw_data);
 
         glfwSwapBuffers(janela);
     }
