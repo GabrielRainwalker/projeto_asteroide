@@ -39,7 +39,7 @@ bool CollisionManager::checkShipAsteroidCollisions(
 
     if (!ship) return false;
 
-    const float SAFE_START_TIME = 2.0f; // 2 segundos de invencibilidade
+    const float SAFE_START_TIME = 2.0f;
     static float gameStartTime = glfwGetTime();
 
     if (glfwGetTime() - gameStartTime < SAFE_START_TIME) {
@@ -50,7 +50,7 @@ bool CollisionManager::checkShipAsteroidCollisions(
         if (!asteroid || asteroid->isDestroyed()) continue;
 
         float distance = glm::length(ship->getPosition() - asteroid->getPosition());
-        float minDistance = ship->getRadius() + asteroid->getRadius() * 0.8f; // Reduzir hitbox
+        float minDistance = ship->getRadius() + asteroid->getRadius() * 0.8f;
 
         if (distance < minDistance) {
             return true;

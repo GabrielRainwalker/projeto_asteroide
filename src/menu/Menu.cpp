@@ -16,10 +16,9 @@ void Menu::inicializar() {
     ImGuiIO& io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 
-    // Carregar a fonte ANTES de qualquer frame
-    io.Fonts->Clear(); // Limpa fontes existentes
-    spaceFont = io.Fonts->AddFontFromFileTTF("assets/space.ttf", 24.0f); // Atualize esta linha
-    io.Fonts->Build(); // Reconstrói o atlas de fontes
+    io.Fonts->Clear();
+    spaceFont = io.Fonts->AddFontFromFileTTF("assets/space.ttf", 24.0f);
+    io.Fonts->Build();
 
     if (spaceFont == nullptr) {
         std::cerr << "Erro ao carregar a fonte space.ttf" << std::endl;
@@ -30,14 +29,13 @@ void Menu::inicializar() {
     // Estilo do ImGui
     ImGuiStyle& style = ImGui::GetStyle();
 
-    style.Colors[ImGuiCol_WindowBg] = ImVec4(0.02f, 0.02f, 0.08f, 0.94f); // Azul escuro espacial
-    style.Colors[ImGuiCol_Button] = ImVec4(0.12f, 0.15f, 0.4f, 1.00f); // Azul base
-    style.Colors[ImGuiCol_ButtonHovered] = ImVec4(0.25f, 0.30f, 0.70f, 1.00f); // Azul mais claro
-    style.Colors[ImGuiCol_ButtonActive] = ImVec4(0.30f, 0.35f, 0.80f, 1.00f); // Azul brilhante
-    style.Colors[ImGuiCol_Text] = ImVec4(0.85f, 0.85f, 1.00f, 1.00f); // Texto mais brilhante
-    style.Colors[ImGuiCol_Border] = ImVec4(0.30f, 0.30f, 0.70f, 0.65f); // Borda azulada
+    style.Colors[ImGuiCol_WindowBg] = ImVec4(0.02f, 0.02f, 0.08f, 0.94f);
+    style.Colors[ImGuiCol_Button] = ImVec4(0.12f, 0.15f, 0.4f, 1.00f);
+    style.Colors[ImGuiCol_ButtonHovered] = ImVec4(0.25f, 0.30f, 0.70f, 1.00f);
+    style.Colors[ImGuiCol_ButtonActive] = ImVec4(0.30f, 0.35f, 0.80f, 1.00f);
+    style.Colors[ImGuiCol_Text] = ImVec4(0.85f, 0.85f, 1.00f, 1.00f);
+    style.Colors[ImGuiCol_Border] = ImVec4(0.30f, 0.30f, 0.70f, 0.65f);
 
-    // Ajustes de estilo
     style.WindowRounding = 12.0f;
     style.FrameRounding = 8.0f;
     style.WindowBorderSize = 1.0f;
@@ -48,7 +46,6 @@ void Menu::inicializar() {
 }
 
 void Menu::desenharMenuPrincipal() {
-    // Centralizar a janela no meio da tela
     ImGui::SetNextWindowPos(ImVec2(ImGui::GetIO().DisplaySize.x * 0.5f,
                                   ImGui::GetIO().DisplaySize.y * 0.5f),
                            ImGuiCond_Always, ImVec2(0.5f, 0.5f));
@@ -61,12 +58,10 @@ void Menu::desenharMenuPrincipal() {
                  ImGuiWindowFlags_NoCollapse |
                  ImGuiWindowFlags_NoTitleBar);
 
-    // Título com efeito de brilho
     static float titleGlow = 0.0f;
     titleGlow = 0.5f + 0.5f * sinf(ImGui::GetTime() * 2.0f);
     ImVec4 titleColor = ImVec4(1.0f, 0.85f + titleGlow * 0.15f, 0.0f + titleGlow * 0.5f, 1.0f);
 
-    // Título maior
     ImGui::PushFont(spaceFont);
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 30);
     float windowWidth = ImGui::GetWindowSize().x;
@@ -75,7 +70,6 @@ void Menu::desenharMenuPrincipal() {
     ImGui::TextColored(titleColor, "JOGO ASTEROIDE");
     ImGui::PopFont();
 
-    // Subtítulo
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 10);
     textWidth = ImGui::CalcTextSize("COMP. GRAFICA").x;
     ImGui::SetCursorPosX((windowWidth - textWidth) * 0.5f);
@@ -83,16 +77,13 @@ void Menu::desenharMenuPrincipal() {
 
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 40);
 
-    // Estilo personalizado para botões
     ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 12));
     ImGui::PushStyleVar(ImGuiStyleVar_ButtonTextAlign, ImVec2(0.5f, 0.5f));
 
-    // Configuração dos botões com efeito hover
     float buttonWidth = 280.0f;
     float buttonHeight = 55.0f;
     float buttonX = (windowWidth - buttonWidth) * 0.5f;
 
-    // Função auxiliar para botões com efeito
     auto DrawButton = [&](const char* label) {
         ImGui::SetCursorPosX(buttonX);
         bool hovered = ImGui::IsMouseHoveringRect(
@@ -129,7 +120,6 @@ void Menu::desenharMenuPrincipal() {
 
     if (DrawButton("SAIR")) glfwSetWindowShouldClose(janela, GLFW_TRUE);
 
-    // Versão com efeito de transparência
     ImGui::SetCursorPos(ImVec2(10, ImGui::GetWindowSize().y - 25));
     ImGui::TextColored(ImVec4(0.5f, 0.5f, 0.7f, 0.6f), "v1.0");
 
@@ -149,7 +139,6 @@ void Menu::desenharConfiguracoes() {
                  ImGuiWindowFlags_NoMove |
                  ImGuiWindowFlags_NoCollapse);
 
-    // Título com decoração
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 10);
     float windowWidth = ImGui::GetWindowSize().x;
     float textWidth = ImGui::CalcTextSize("CONFIGURAÇÕES").x;
@@ -160,13 +149,11 @@ void Menu::desenharConfiguracoes() {
     ImGui::Separator();
     ImGui::Spacing();
 
-    // Painel de controles com estilo
     ImGui::BeginChild("Controles", ImVec2(0, 400), true);
 
     ImGui::TextColored(ImVec4(0.7f, 0.7f, 1.0f, 1.0f), "CONTROLES DA NAVE");
     ImGui::Spacing();
 
-    // Estilo para os controles
     ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.9f, 0.9f, 0.9f, 0.9f));
     ImGui::BulletText("W - Andar para frente");
     ImGui::BulletText("S - Andar para trás");
@@ -188,7 +175,6 @@ void Menu::desenharConfiguracoes() {
 
     ImGui::EndChild();
 
-    // Botão Voltar estilizado
     float buttonWidth = 200.0f;
     ImGui::SetCursorPosX((windowWidth - buttonWidth) * 0.5f);
     if (ImGui::Button("VOLTAR", ImVec2(buttonWidth, 45))) {
@@ -229,10 +215,8 @@ void Menu::update(float deltaTime) {
 
 void Menu::desenhar() {
     if (jogoIniciado) {
-        // Renderiza o jogo
         gameManager->render();
 
-        // Renderiza a HUD do jogo
         ImGui::SetNextWindowPos(ImVec2(10, 10));
         ImGui::SetNextWindowSize(ImVec2(200, 100));
         ImGui::Begin("HUD", nullptr,

@@ -78,7 +78,6 @@ void Ship::handleInput(float deltaTime) {
     ImGuiIO& io = ImGui::GetIO();
     if (io.WantCaptureKeyboard) return;
 
-    // Rotação
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
         rotation += 180.0f * deltaTime;
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)

@@ -41,4 +41,5 @@ private:
     void handleInput(float deltaTime);
     void updateProjectiles(float deltaTime);
 };
+
 #endif

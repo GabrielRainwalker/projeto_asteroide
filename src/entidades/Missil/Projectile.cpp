@@ -14,8 +14,8 @@ Projectile::Projectile(const glm::vec2& pos, const glm::vec2& vel)
     , active(true)
     , exploding(false)
     , currentFrame(0.0f)
-    , frameTime(0.05f)  // 20 frames por segundo
-    , totalFrames(6)    // Número de frames na animação de explosão
+    , frameTime(0.05f)
+    , totalFrames(6)
 {
     init();
 }
@@ -35,7 +35,6 @@ void Projectile::init() {
 
 void Projectile::setupMesh() {
     float vertices[] = {
-        // Posições    // Coordenadas de textura
         -5.0f, -5.0f,  0.0f, 0.0f,
          5.0f, -5.0f,  0.166f, 0.0f,
          5.0f,  5.0f,  0.166f, 1.0f,
@@ -75,7 +74,6 @@ void Projectile::updateAnimation(float deltaTime) {
             return;
         }
 
-        // Atualiza as coordenadas de textura
         float texOffset = (currentFrame / totalFrames);
         float vertices[] = {
             -5.0f, -5.0f,  texOffset, 0.0f,
@@ -96,7 +94,6 @@ void Projectile::update(float deltaTime) {
         position += velocity * deltaTime;
         lifeTime += deltaTime;
 
-        // Verifica limites da tela
         if (position.x < -10 || position.x > 810 ||
             position.y < -10 || position.y > 610) {
             startExplosion();

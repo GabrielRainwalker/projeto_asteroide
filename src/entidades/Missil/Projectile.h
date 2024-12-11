@@ -18,7 +18,6 @@ private:
     bool active;
     bool exploding;
 
-    // Animação
     float currentFrame;
     float frameTime;
     int totalFrames;
@@ -45,4 +44,4 @@ public:
     float getRadius() const { return 5.0f; }
 };
 
-#endif //PROJECTILE_H
+#endif

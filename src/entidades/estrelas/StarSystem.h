@@ -15,16 +15,16 @@ class StarSystem {
 private:
     struct Star {
         glm::vec2 position;
-        float brightness;  // Brilho da estrela
-        float pulseSpeed;  // Velocidade de pulsação
-        float pulseOffset; // Deslocamento da pulsação
-        float size;       // Tamanho da estrela
+        float brightness;
+        float pulseSpeed;
+        float pulseOffset;
+        float size;
     };
 
     std::vector<Star> stars;
     GLuint VAO, VBO;
     Shader* shader;
-    const int NUM_STARS = 200; // Mais estrelas para um céu mais preenchido
+    const int NUM_STARS = 200;
 
     void setupMesh();
     void createStars();

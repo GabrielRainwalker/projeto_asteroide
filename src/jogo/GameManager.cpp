@@ -81,15 +81,12 @@ void GameManager::update(float deltaTime) {
     float currentTime = glfwGetTime();
     starSystem.update(deltaTime, currentTime);
 
-    // Atualiza a nave
     playerShip->update(deltaTime);
 
-    // Atualiza asteroides
     for (auto& asteroid : asteroids) {
         asteroid->update(deltaTime);
     }
 
-    // Verifica colisões
     if (CollisionManager::checkShipAsteroidCollisions(playerShip.get(), asteroids)) {
         std::cout << "Colisao detectada" << std::endl;
         isPlaying = false;
@@ -127,11 +124,9 @@ void GameManager::spawnAsteroids(int count) {
 }
 void GameManager::renderHUD() {
 
-    // Define a posição e o tamanho da janela HUD
     ImGui::SetNextWindowPos(ImVec2(10, 10), ImGuiCond_Always);
     ImGui::SetNextWindowSize(ImVec2(200, 100), ImGuiCond_Always);
 
-    // Cria uma janela sem decoração para o HUD
     ImGui::Begin("HUD", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove |
                                     ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoSavedSettings |
                                     ImGuiWindowFlags_NoInputs | ImGuiWindowFlags_NoBackground);

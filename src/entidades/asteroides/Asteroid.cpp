@@ -7,12 +7,10 @@
 
 Asteroid::Asteroid(float x, float y, float s)
     : position(x, y), size(s), isExploding(false) {
-    // Inicialize o shader, textura e configure a mesh
     shader = new Shader("../shaders/sprite.vert", "../shaders/sprite.frag");
     textureID = TextureManager::getInstance().loadTexture("assets/asteroide.png");
     setupMesh();
 
-    // Defina uma velocidade aleatória
     float angle = rand() % 360;
     float speed = 100.0f;
     velocity = glm::vec2(cos(glm::radians(angle)), sin(glm::radians(angle))) * speed;
@@ -72,7 +70,7 @@ void Asteroid::updateAnimation(float deltaTime) {
             animationTimer = 0;
             currentFrame++;
 
-            // Atualiza as coordenadas de textura
+
             float texOffset = currentFrame / static_cast<float>(TOTAL_FRAMES);
             float vertices[] = {
                 -0.5f, -0.5f,  texOffset, 0.0f,
@@ -92,7 +90,6 @@ void Asteroid::update(float deltaTime) {
         position += velocity * deltaTime;
         rotation += 45.0f * deltaTime;
 
-        // Wrap around screen
         if (position.x < -50) position.x = 850;
         if (position.x > 850) position.x = -50;
         if (position.y < -50) position.y = 650;
